@@ -6,6 +6,7 @@ const LINKS = {
   linkedin: "https://www.linkedin.com/in/yalvin-clay-3841a3326/",
   github: "https://github.com/Xavezs",
   email: "mailto:yalvinclay22@gmail.com",
+  whatsapp: "https://wa.me/6281292227933", // +62 812-9222-7933
   // Put your CV in the public folder, e.g. "/Yalvin-Clay-CV.pdf". Empty hides the button.
   cv: "", // e.g. "/Yalvin-Clay-CV.pdf" once the file is in public/
 };
@@ -429,7 +430,26 @@ const stats = [
 
 // Leave empty to hide the section. Example:
 // { role: "Vice Coordinator, Sponsor Division", org: "HIMTI", period: "2025", points: ["What you did"] }
-const experience = [];
+const experience = [
+  {
+    role: "Member, Design and Documentation (HISHOT 2025)",
+    org: "HIMTI",
+    period: "2025",
+    points: [], // add what you did, e.g. "Designed event visuals for ..."
+  },
+  {
+    role: "Member, Creative and Design (CnD)",
+    org: "HIMTI",
+    period: "", // e.g. "2025"
+    points: [],
+  },
+  {
+    role: "Member, Design and Documentation (HIMTI Talkshow)",
+    org: "HIMTI",
+    period: "", // e.g. "2025"
+    points: [],
+  },
+];
 
 // Leave empty to hide the section. Example:
 // { title: "Certificate name", issuer: "Organizer", year: "2026", image: "/cert.png", link: "" }
@@ -589,6 +609,7 @@ export default function Portfolio() {
               <div className="social st mt-5" style={{ "--i": 5 }}>
                 <a href={LINKS.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
                 <a href={LINKS.github} target="_blank" rel="noreferrer">GitHub</a>
+                <a href={LINKS.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
               </div>
             </div>
             <div className="st w-40 shrink-0 sm:w-56" style={{ "--i": 3 }}>
@@ -769,12 +790,14 @@ export default function Portfolio() {
               <button type="button" className="cb cb2" onClick={copyEmail}>
                 {copied ? "Copied" : "Copy email"}
               </button>
+              <a className="cb cb2" href={LINKS.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
               {LINKS.cv && <a className="cb cb2" href={LINKS.cv} download>Download CV</a>}
             </div>
             <span className="sr-only" role="status" aria-live="polite">{copied ? "Email address copied" : ""}</span>
             <div className="ct-soc">
               <a href={LINKS.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
               <a href={LINKS.github} target="_blank" rel="noreferrer">GitHub</a>
+              <a href={LINKS.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
             </div>
           </div>
         </div>
