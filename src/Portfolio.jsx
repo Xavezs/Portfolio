@@ -1,18 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-// TODO: replace with your real links
 const LINKS = {
   linkedin: "https://www.linkedin.com/in/yalvin-clay-3841a3326/",
   github: "https://github.com/Xavezs",
   email: "mailto:yalvinclay22@gmail.com",
-  whatsapp: "https://wa.me/6281292227933", // +62 812-9222-7933
-  // Put your CV in the public folder, e.g. "/Yalvin-Clay-CV.pdf". Empty hides the button.
-  cv: "", // e.g. "/Yalvin-Clay-CV.pdf" once the file is in public/
+  whatsapp: "https://wa.me/6281292227933", 
+  cv: "", 
 };
 
-// Put your photo path here, e.g. "/me.jpg". Empty shows a placeholder.
-// For project screenshots, add image: "/shot.png" to a project below.
+
 const PHOTO = "";
 
 const Media = ({ src, alt, label, ratio }) =>
@@ -28,10 +25,6 @@ const I = (props) => (
   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props} />
 );
 
-// `src` can be one image path or an array of paths.
-// Several images: arrows, dots and auto-advance (paused on hover/focus).
-// Click an image (or the expand button) to open it full size; arrows, keyboard
-// left/right and swipe change image there, Esc or a click outside closes it.
 const SLIDE_MS = 4500;
 const Gallery = ({ src, title, fit, captions }) => {
   const list = Array.isArray(src) ? src : src ? [src] : [];
@@ -213,7 +206,6 @@ const css = `
 @media(min-width:800px){.pf .ct{grid-template-columns:1.15fr 1fr;gap:3rem}}
 .pf .ct h2{font-size:clamp(2.1rem,5.5vw,3.4rem);line-height:1.02;letter-spacing:-.02em}
 .pf .ct-open{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;margin-bottom:1rem;padding:.15rem .8rem;border:1px solid rgba(255,255,255,.4);border-radius:999px}
-.pf .ct-open::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:#7CFFB2}
 .pf .ct-copy{margin-top:.9rem;max-width:30rem;font-size:1.05rem;line-height:1.55;opacity:.92}
 .pf .ct-card{background:rgba(9,8,13,.3);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:1.4rem}
 .pf .ct-lbl{font-size:.8rem;opacity:.75}
@@ -251,7 +243,7 @@ const css = `
 .pf .b1{width:26rem;height:26rem;background:var(--crimson);top:-6rem;right:-4rem}
 .pf .b2{width:20rem;height:20rem;background:var(--hi);top:18rem;left:-6rem;opacity:.16}
 .pf main{position:relative;z-index:1}
-.pf .shim{background:linear-gradient(90deg,var(--hi),var(--g2),var(--hi));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+.pf .shim{color: var(--hi);}
 .pf .marq{overflow:hidden;border-block:1px solid var(--line);padding:.75rem 0;margin-top:1rem;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .pf .marq-track{display:flex;gap:2.5rem;width:max-content;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.85rem;color:var(--mute)}
 .pf .marq-track span::before{content:"";display:inline-block;width:.4rem;height:.4rem;border-radius:50%;background:var(--hi);margin-right:.7rem;vertical-align:middle}
@@ -612,9 +604,6 @@ export default function Portfolio() {
                 <a href={LINKS.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
               </div>
             </div>
-            <div className="st w-40 shrink-0 sm:w-56" style={{ "--i": 3 }}>
-              <Media src={PHOTO} alt="Portrait of Yalvin Clay" label="Your photo" ratio="1 / 1" />
-            </div>
           </div>
         </div>
 
@@ -693,7 +682,7 @@ export default function Portfolio() {
                     {p.stack.split(", ").map((t) => (
                       <span key={t} className="chip">{t}</span>
                     ))}
-                  </p>
+                  </p> 
                   {(p.repo || p.demo || p.paper) && (
                     <p className="mt-4 flex flex-wrap gap-3">
                       {p.demo && <a className="btn inline-block" href={p.demo} target="_blank" rel="noreferrer">Live demo</a>}
@@ -804,7 +793,7 @@ export default function Portfolio() {
       </section>
 
       <footer className="foot mute">
-        <div className="wrap">© Yalvin Clay</div>
+        <div className="wrap text-center">© Yalvin Clay</div>
       </footer>
     </div>
   );
