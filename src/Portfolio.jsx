@@ -585,14 +585,14 @@ export default function Portfolio() {
                 Hello, I'm <span className="shim">Yalvin Clay</span>
               </h1>
               <p className="tag st mt-4 max-w-xl" style={{ "--i": 2 }}>
-                Curious CS student, building things to learn how they work.
+                CS student, building things to learn how they work.
               </p>
               <p className="mute st mt-3 max-w-xl" style={{ "--i": 3 }}>
                 Computer Science student at BINUS University, exploring full-stack
                 development, NLP and computer vision.
               </p>
               <p className="st mt-6 flex flex-wrap items-center gap-3" style={{ "--i": 4 }}>
-                <a className="btn" href="#projects">View projects</a>
+                <a className="btn" href="#projects">My projects</a>
                 <a className="btn2" href={LINKS.email}>Email me</a>
                 {LINKS.cv && (
                   <a className="btn2" href={LINKS.cv} download>Download CV</a>
