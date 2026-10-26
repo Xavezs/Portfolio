@@ -6,7 +6,7 @@ const LINKS = {
   github: "https://github.com/Xavezs",
   email: "mailto:yalvinclay22@gmail.com",
   whatsapp: "https://wa.me/6281292227933", 
-  cv: "", 
+  cv: "CV_Yalvin_Clay.pdf", 
 };
 
 
@@ -601,7 +601,7 @@ export default function Portfolio() {
               <div className="social st mt-5" style={{ "--i": 5 }}>
                 <a href={LINKS.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
                 <a href={LINKS.github} target="_blank" rel="noreferrer">GitHub</a>
-                <a href={LINKS.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
+                <a href={LINKS.whatsapp} target="_blank" rel="noreferrer">+62 812-9222-7933</a>
               </div>
             </div>
           </div>
