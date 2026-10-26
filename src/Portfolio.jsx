@@ -6,7 +6,7 @@ const LINKS = {
   github: "https://github.com/Xavezs",
   email: "mailto:yalvinclay22@gmail.com",
   whatsapp: "https://wa.me/6281292227933", 
-  cv: "CV_Yalvin_Clay.pdf", 
+  cv: "CV-YalvinClay.pdf", 
 };
 
 
@@ -604,6 +604,13 @@ export default function Portfolio() {
                 <a href={LINKS.whatsapp} target="_blank" rel="noreferrer">+62 812-9222-7933</a>
               </div>
             </div>
+            {PHOTO && (
+              <img
+                src={PHOTO}
+                alt="Yalvin Clay"
+                className="h-56 w-56 shrink-0 self-center rounded-full object-cover md:h-72 md:w-72"
+              />
+            )}
           </div>
         </div>
 
